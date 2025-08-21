@@ -17,7 +17,7 @@ BLUE		=	\033[34m
 
 # Fichiers sources et objets
 SRCS = main.cpp \
-		Fixed.cpp
+		ClapTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 		
