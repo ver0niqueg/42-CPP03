@@ -14,30 +14,31 @@
 
 int main()
 {
+    std::cout << "=== Creating ClapTrap ===" << std::endl;
     ClapTrap clap("Clappy");
 
-    clap.attack("Ghost target");
+    std::cout << "\n=== Initial Attack ===" << std::endl;
+    clap.attack("Target Dummy");
 
+    std::cout << "\n=== Taking Damage ===" << std::endl;
     clap.takeDamage(3);
 
+    std::cout << "\n=== Repairing ===" << std::endl;
     clap.beRepaired(5);
 
-    // test si on vide l'energie
+    std::cout << "\n=== Draining Energy ===" << std::endl;
     for (int i = 0; i < 10; ++i)
-        clap.attack("Training Bot");
+        clap.attack("Energy Drain Target");
 
-    // essai d'attaque avec 0 energie
-    clap.attack("Last Bot");
+    std::cout << "\n=== Trying to attack with no energy ===" << std::endl;
+    clap.attack("Out of energy");
 
-    // essai reparation avec 0 energie
-    clap.beRepaired(2);
-
-    // subir des degats fatal
+    std::cout << "\n=== Taking Lethal Damage ===" << std::endl;
     clap.takeDamage(20);
 
-    // essais d'action apres destruction
-    clap.attack("Ghost target");
-    clap.beRepaired(5);
+    std::cout << "\n=== Trying to repair while dead ===" << std::endl;
+    clap.beRepaired(10);
 
-    return (0);
+    std::cout << "\n=== End of main ===" << std::endl;
+    return 0;
 }
