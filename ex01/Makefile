@@ -1,5 +1,5 @@
 # Nom du programme
-NAME = Serena
+NAME = ScavTrap
 
 # Compilateur et options
 CC = c++
