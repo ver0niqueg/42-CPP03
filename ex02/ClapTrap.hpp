@@ -19,9 +19,9 @@ class ClapTrap
 {
     protected:
         std::string _name;
-        int _hitPoints; // health of the ClapTrap
-        int _energyPoints;
-        int _attackDamage;
+        unsigned int _hitPoints; // health of the ClapTrap
+        unsigned int _energyPoints;
+        unsigned int _attackDamage;
 
     public:
         ClapTrap();
@@ -32,7 +32,8 @@ class ClapTrap
 
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);  
+        void beRepaired(unsigned int amount);
+        void printStatus() const;       
 };
 
 #endif

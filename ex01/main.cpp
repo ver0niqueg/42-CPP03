@@ -15,19 +15,24 @@
 int main()
 {
     std::cout << "=== Creating ScavTrap ===" << std::endl;
-    ScavTrap robot("Veronique");
+    ScavTrap robot("VERO0");
+    robot.printStatus();
 
     std::cout << "\n=== Testing attack() ===" << std::endl;
     robot.attack("intruder");
+    robot.printStatus();
 
     std::cout << "\n=== Taking damage ===" << std::endl;
     robot.takeDamage(30);
+    robot.printStatus();
 
     std::cout << "\n=== Repairing ===" << std::endl;
     robot.beRepaired(20);
+    robot.printStatus();
 
     std::cout << "\n=== Entering Gate Keeper Mode ===" << std::endl;
     robot.guardGate();
+    robot.printStatus();
 
     std::cout << "\n=== Exiting main() ===" << std::endl;
     return 0;

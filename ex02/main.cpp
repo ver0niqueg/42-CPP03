@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 14:36:59 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/22 14:40:04 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/22 14:56:10 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,36 +15,37 @@
 
 int main()
 {
-    std::cout << "=== Création d'un FragTrap ===" << std::endl;
+    std::cout << "=== Création d'un ClapTrap ===" << std::endl;
+    ClapTrap ct("CL4P-TP");
+
+    std::cout << "\n--- Tests de base pour ClapTrap ---" << std::endl;
+    ct.attack("un ennemi");
+    ct.takeDamage(20);
+    ct.beRepaired(10);
+
+    std::cout << "\n=== Création d'un ScavTrap ===" << std::endl;
+    ScavTrap st("SC4V-TP");
+
+    std::cout << "\n--- Tests de base pour ScavTrap ---" << std::endl;
+    st.attack("un intrus");
+    st.takeDamage(25);
+    st.beRepaired(15);
+    st.guardGate();  // fonction spécifique à ScavTrap
+
+    std::cout << "\n=== Création d'un FragTrap ===" << std::endl;
     FragTrap ft("FR4G-TP");
 
-    std::cout << "\n=== Tests de base ===" << std::endl;
+    std::cout << "\n--- Tests de base pour FragTrap ---" << std::endl;
     ft.attack("un ennemi");
     ft.takeDamage(30);
     ft.beRepaired(20);
+    ft.highFivesGuys();  // fonction spécifique à FragTrap
 
-    std::cout << "\n=== Test de la capacité spéciale ===" << std::endl;
-    ft.highFivesGuys();
-
-    std::cout << "\n=== Test du constructeur de copie ===" << std::endl;
+    std::cout << "\n--- Test constructeur de copie FragTrap ---" << std::endl;
     FragTrap ft2 = ft;
     ft2.attack("un autre ennemi");
 
-    std::cout << "\n=== Test limites énergie ===" << std::endl;
-    for (int i = 0; i < 105; i++) {
-        ft.attack("dummy target");
-    }
+    std::cout << "\n=== Fin des tests, destruction en chaîne ===" << std::endl;
 
-    std::cout << "\n=== Test mort ===" << std::endl;
-    ft.takeDamage(200);   // tue le FragTrap
-    ft.attack("ghost");   // ne devrait pas marcher
-    ft.beRepaired(50);    // ne devrait pas marcher
-
-    std::cout << "\n=== Comparaison avec un ScavTrap ===" << std::endl;
-    ScavTrap st("SC4V-TP");
-    st.attack("intrus");
-    st.guardGate();
-
-    std::cout << "\n=== Fin du programme (destruction en chaîne) ===" << std::endl;
     return 0;
 }
