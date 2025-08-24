@@ -14,44 +14,44 @@
 
 int main()
 {
-    std::cout << CYAN << "=== Welcome to the Forest Guardian Training ===" << RESET << std::endl;
+    std::cout << CYAN << "=== Welcome to the Forest Training ===" << RESET << std::endl;
 
-    std::cout << "\n" << YELLOW << "=== Creating ClapTrap Guardian ===" << RESET << std::endl;
-    ClapTrap guardian("Sylva");
-    guardian.printStatus();
+    std::cout << "\n" << YELLOW << "=== Creating ClapTrap fairy ===" << RESET << std::endl;
+    ClapTrap fairy("Nymera");
+    fairy.printStatus();
 
     std::cout << "\n" << GREEN << "=== First attack to defend the forest ===" << RESET << std::endl;
-    guardian.attack("Forest Invader");
-    guardian.printStatus();
+    fairy.attack("Forest Invader");
+    fairy.printStatus();
 
     std::cout << "\n" << RED << "=== Taking damage from dark magic ===" << RESET << std::endl;
-    guardian.takeDamage(5);
-    guardian.printStatus();
+    fairy.takeDamage(5);
+    fairy.printStatus();
 
     std::cout << "\n" << GREEN << "=== Healing with forest's blessing ===" << RESET << std::endl;
-    guardian.beRepaired(7);
-    guardian.printStatus();
+    fairy.beRepaired(7);
+    fairy.printStatus();
 
-    std::cout << "\n" << MAGENTA << "=== Using up energy fighting pests ===" << RESET << std::endl;
+    std::cout << "\n" << MAGENTA << "=== Using up energy fighting all the dark spirits ===" << RESET << std::endl;
     for (int i = 0; i < 10; ++i)
     {
-        guardian.attack("Forest Pest");
-        guardian.printStatus();
+        fairy.attack("Dark spirits");
+        fairy.printStatus();
     }
 
     std::cout << "\n" << RED << "=== Attempting attack with no energy left ===" << RESET << std::endl;
-    guardian.attack("Last Pest");
-    guardian.printStatus();
+    fairy.attack("Last dark spirit");
+    fairy.printStatus();
 
     std::cout << "\n" << RED << "=== Taking heavy damage from a dark curse ===" << RESET << std::endl;
-    guardian.takeDamage(20);
-    guardian.printStatus();
+    fairy.takeDamage(20);
+    fairy.printStatus();
 
     std::cout << "\n" << YELLOW << "=== Trying to heal when too weak ===" << RESET << std::endl;
-    guardian.beRepaired(10);
-    guardian.printStatus();
+    fairy.beRepaired(10);
+    fairy.printStatus();
 
-    std::cout << "\n" << CYAN << "=== End of Guardian Training ===" << RESET << std::endl;
+    std::cout << "\n" << CYAN << "=== End of the Forest Training ===" << RESET << std::endl;
 
     return 0;
 }
