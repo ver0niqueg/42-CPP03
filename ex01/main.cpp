@@ -14,26 +14,29 @@
 
 int main()
 {
-    std::cout << "=== Creating ScavTrap ===" << std::endl;
-    ScavTrap robot("VERO0");
-    robot.printStatus();
+    std::cout << CYAN << "Welcome to the Enchanted Fairy Forest!" << RESET << std::endl;
 
-    std::cout << "\n=== Testing attack() ===" << std::endl;
-    robot.attack("intruder");
-    robot.printStatus();
+    std::cout << "\n" << YELLOW << "=== Summoning the Forest Guardian Fairy ===" << RESET << std::endl;
+    ScavTrap fairyGuardian("Sylva");
+    fairyGuardian.printStatus();
 
-    std::cout << "\n=== Taking damage ===" << std::endl;
-    robot.takeDamage(30);
-    robot.printStatus();
+    std::cout << "\n" << GREEN << "=== Casting an attack spell ===" << RESET << std::endl;
+    fairyGuardian.attack("Mischievous Goblin");
+    fairyGuardian.printStatus();
 
-    std::cout << "\n=== Repairing ===" << std::endl;
-    robot.beRepaired(20);
-    robot.printStatus();
+    std::cout << "\n" << RED << "=== Taking damage from dark magic ===" << RESET << std::endl;
+    fairyGuardian.takeDamage(30);
+    fairyGuardian.printStatus();
 
-    std::cout << "\n=== Entering Gate Keeper Mode ===" << std::endl;
-    robot.guardGate();
-    robot.printStatus();
+    std::cout << "\n" << MAGENTA << "=== Healing with forest light ===" << RESET << std::endl;
+    fairyGuardian.beRepaired(20);
+    fairyGuardian.printStatus();
 
-    std::cout << "\n=== Exiting main() ===" << std::endl;
+    std::cout << "\n" << CYAN << "=== Entering Gate Keeper Mode to protect the realm ===" << RESET << std::endl;
+    fairyGuardian.guardGate();
+    fairyGuardian.printStatus();
+
+    std::cout << "\n" << YELLOW << "The fairy’s duty is done for now..." << RESET << std::endl;
+
     return 0;
 }

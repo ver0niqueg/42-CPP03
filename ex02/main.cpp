@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 14:36:59 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/22 19:14:38 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/24 19:58:00 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,53 +15,59 @@
 
 int main()
 {
-    std::cout << "=== Création d'un ClapTrap ===" << std::endl;
-    ClapTrap ct("CL4P-TP");
+    std::cout << CYAN << "Welcome to the Enchanted Fairy Forest!" << RESET << std::endl;
+
+    std::cout << "\n" << YELLOW << "=== Summoning a Gentle Forest Sprite ===" << RESET << std::endl;
+    ClapTrap ct("Luna");
     ct.printStatus();
 
-    std::cout << "\n--- Tests de base pour ClapTrap ---" << std::endl;
-    ct.attack("un ennemi");
+    std::cout << "\n" << MAGENTA << "--- Basic trials for Luna the Sprite ---" << RESET << std::endl;
+    ct.attack("wicked thorn");
     ct.printStatus();
     ct.takeDamage(20);
     ct.printStatus();
     ct.beRepaired(10);
     ct.printStatus();
 
-    std::cout << "\n=== Création d'un ScavTrap ===" << std::endl;
-    ScavTrap st("SC4V-TP");
+    std::cout << "\n" << YELLOW << "=== Summoning the Gatekeeper Fairy ===" << RESET << std::endl;
+    ScavTrap st("Sylva");
     st.printStatus();
 
-    std::cout << "\n--- Tests de base pour ScavTrap ---" << std::endl;
-    st.attack("un intrus");
+    std::cout << "\n" << MAGENTA << "--- Basic trials for Sylva the Gatekeeper ---" << RESET << std::endl;
+    st.attack("mischievous pixie");
     st.printStatus();
     st.takeDamage(25);
     st.printStatus();
     st.beRepaired(15);
     st.printStatus();
-    st.guardGate();  // fonction spécifique à ScavTrap
+    std::cout << BLUE;  // Specific skill in blue for emphasis
+    st.guardGate();  // specific ScavTrap skill
+    std::cout << RESET;
     st.printStatus();
 
-    std::cout << "\n=== Création d'un FragTrap ===" << std::endl;
-    FragTrap ft("FR4G-TP");
+    std::cout << "\n" << YELLOW << "=== Summoning the Fierce Frag Fairy ===" << RESET << std::endl;
+    FragTrap ft("Flora");
     ft.printStatus();
 
-    std::cout << "\n--- Tests de base pour FragTrap ---" << std::endl;
-    ft.attack("un ennemi");
+    std::cout << "\n" << MAGENTA << "--- Basic trials for Flora the Fierce ---" << RESET << std::endl;
+    ft.attack("dark shadow");
     ft.printStatus();
     ft.takeDamage(30);
     ft.printStatus();
     ft.beRepaired(20);
     ft.printStatus();
-    ft.highFivesGuys();  // fonction spécifique à FragTrap
+    std::cout << GREEN;  // FragTrap special skill in green (high five = positive)
+    ft.highFivesGuys();  // specific FragTrap skill
+    std::cout << RESET;
     ft.printStatus();
 
-    std::cout << "\n--- Test constructeur de copie FragTrap ---" << std::endl;
+    std::cout << "\n" << YELLOW << "--- Testing FragTrap copy constructor ---" << RESET << std::endl;
     FragTrap ft2 = ft;
     ft2.printStatus();
-    ft2.attack("un autre ennemi");
+    ft2.attack("another shadow");
     ft2.printStatus();
 
-    std::cout << "\n=== Fin des tests, destruction en chaîne ===" << std::endl;
+    std::cout << "\n" << CYAN << "=== End of the fairy tales, the forest falls silent... ===" << RESET << std::endl;
 
     return 0;
 }

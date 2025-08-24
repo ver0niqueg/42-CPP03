@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 13:12:14 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/22 19:13:46 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/24 19:32:00 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ FragTrap::FragTrap(std::string Name) : ClapTrap(Name)
     std::cout << "FragTrap: " << _name << " has been created." << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &copy)
+FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
     _hitPoints = copy._hitPoints;
     _energyPoints = copy._energyPoints;
