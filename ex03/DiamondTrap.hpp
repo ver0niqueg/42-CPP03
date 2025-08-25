@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 19:41:16 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/24 19:30:35 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/25 16:08:29 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ c'est de faire un héritage virtuel sur FragTrap et ScavTrap */
 
 class DiamondTrap : public FragTrap, public ScavTrap
 {
-    private: 
-        std::string _name;
-        
-    public:
-        DiamondTrap();
-        DiamondTrap(const std::string &name);
-        DiamondTrap(DiamondTrap const &copy);
-        DiamondTrap& operator=(const DiamondTrap& other);
-        ~DiamondTrap();
+	private: 
+		std::string _name;
+		
+	public:
+		DiamondTrap();
+		DiamondTrap(const std::string &name);
+		DiamondTrap(DiamondTrap const &copy);
+		DiamondTrap& operator=(const DiamondTrap& other);
+		~DiamondTrap();
 
-        void attack(const std::string& target); // utilise ScavTrap::attack
-        void whoAmI();
-    
+		void attack(const std::string& target); // utilise ScavTrap::attack
+		void whoAmI();
+	
 };
 
 #endif
