@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 13:12:14 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/25 16:02:37 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/25 16:40:53 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,7 @@ FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 FragTrap &FragTrap::operator=(const FragTrap &other)
 {
 	if (this != &other)
-	{
 		ClapTrap::operator=(other);
-		_hitPoints = other._hitPoints;
-		_energyPoints = other._energyPoints;
-		_attackDamage = other._attackDamage;
-		_name = other._name;
-	}
 	std::cout << "FragTrap: " << _name << " copied another FragTrap's stats." << std::endl;
 	return (*this);
 }
