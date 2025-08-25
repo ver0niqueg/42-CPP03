@@ -31,7 +31,7 @@ OBJ_PATH = $(addprefix $(OBJDIR), $(OBJS))
 
 # Compilation du programme
 all: $(NAME)
-		@printf "$(BLUE)Welcome to EX02 of CPP03\n$(RESET)"
+		@printf "$(BLUE)Welcome to EX03 of CPP03\n$(RESET)"
 
 $(NAME): $(OBJ_PATH)
 		@echo "$(YELLOW)Compiling [$(NAME)]...$(RESET)"
@@ -55,16 +55,16 @@ $(OBJDIR):
 clean:
 	@if [ -d "$(OBJDIR)" ]; then \
 	rm -rf $(OBJDIR); \
-	echo "$(BLUE)Deleting all objects from /ex02...$(RESET)"; else \
-	echo "No objects to remove from /ex02."; \
+	echo "$(BLUE)Deleting all objects from /ex03...$(RESET)"; else \
+	echo "No objects to remove from /ex03."; \
 	fi;
 
 # Nettoyage complet
 fclean: clean
 	@if [ -f "$(NAME)" ]; then \
 	rm -f $(NAME); \
-	echo "$(BLUE)Deleting $(NAME) from ex02...$(RESET)"; else \
-	echo "No Executable to remove from ex02."; \
+	echo "$(BLUE)Deleting $(NAME) from ex03...$(RESET)"; else \
+	echo "No Executable to remove from ex03."; \
 	fi;
 
 # Recompiler proprement
