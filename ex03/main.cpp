@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 19:41:38 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/25 16:08:39 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/25 16:46:14 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	std::cout << "Welcome to the Enchanted Fairy Forest !" << std::endl;
+	std::cout << YELLOW << "Welcome to the Enchanted Fairy Forest !" << RESET << std::endl;
 
 	ClapTrap fairy1("Nymera");
 	ScavTrap fairy2("Seraphina");
