@@ -17,7 +17,7 @@ int main()
     std::cout << CYAN << "Welcome to the Enchanted Fairy Forest!" << RESET << std::endl;
 
     std::cout << "\n" << YELLOW << "=== Summoning the Forest Guardian Fairy ===" << RESET << std::endl;
-    ScavTrap fairyGuardian("Sylva");
+    ScavTrap fairyGuardian("Seraphina");
     fairyGuardian.printStatus();
 
     std::cout << "\n" << GREEN << "=== Casting an attack spell ===" << RESET << std::endl;
@@ -28,15 +28,15 @@ int main()
     fairyGuardian.takeDamage(30);
     fairyGuardian.printStatus();
 
-    std::cout << "\n" << MAGENTA << "=== Healing with forest light ===" << RESET << std::endl;
+    std::cout << "\n" << GREEN << "=== Healing with forest light ===" << RESET << std::endl;
     fairyGuardian.beRepaired(20);
     fairyGuardian.printStatus();
 
-    std::cout << "\n" << CYAN << "=== Entering Gate Keeper Mode to protect the realm ===" << RESET << std::endl;
+    std::cout << "\n" << GREEN << "=== Entering Gate Keeper Mode to protect the realm ===" << RESET << std::endl;
     fairyGuardian.guardGate();
     fairyGuardian.printStatus();
 
-    std::cout << "\n" << YELLOW << "The fairy’s duty is done for now..." << RESET << std::endl;
+    std::cout << "\n" << YELLOW << "The fairys duty is done for now..." << RESET << std::endl;
 
     return 0;
 }
