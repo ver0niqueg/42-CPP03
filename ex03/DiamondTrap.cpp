@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 19:41:30 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/24 19:34:32 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/25 14:51:26 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ DiamondTrap::DiamondTrap() : ClapTrap("default_clap_name"), FragTrap(),
     _energyPoints = ScavTrap::_energyPoints;
     _attackDamage = FragTrap::_attackDamage;
 
-    std::cout << "DiamondTrap default constructor called." << std::endl;
+    std::cout << "DiamondTrap " << _name << " has emerged from the shadows!" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"),
@@ -29,13 +29,13 @@ DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"
     _energyPoints = ScavTrap::_energyPoints;
     _attackDamage = FragTrap::_attackDamage;
 
-    std::cout << "DiamondTrap " << _name << "has been created." << std::endl;
+    std::cout << "DiamondTrap " << _name << " has been forged from FragTrap and ScavTrap!" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& copy) : ClapTrap(copy), FragTrap(copy), 
     ScavTrap(copy), _name(copy._name)
 {
-        std::cout << "DiamondTrap copy constructor called." << std::endl;
+    std::cout << "DiamondTrap " << _name << " has been cloned!" << std::endl;
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
@@ -45,13 +45,13 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
         ClapTrap::operator=(other);
         _name = other._name;
     }
-    std::cout << "DiamondTrap assignment operator called." << std::endl;
+    std::cout << "DiamondTrap " << _name << " has assumed the stats of another DiamondTrap!" << std::endl;
     return (*this);
 }
 
 DiamondTrap::~DiamondTrap()
 {
-    std::cout << "DiamondTrap " << _name << " has been destroyed." << std::endl;
+    std::cout << "DiamondTrap " << _name << " has been vanquished." << std::endl;
 }
 
 void DiamondTrap::attack(const std::string& target)

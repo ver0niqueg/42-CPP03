@@ -6,7 +6,7 @@
 /*   By: vgalmich <vgalmich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 14:36:59 by vgalmich          #+#    #+#             */
-/*   Updated: 2025/08/24 19:58:00 by vgalmich         ###   ########.fr       */
+/*   Updated: 2025/08/25 14:40:09 by vgalmich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,47 +17,47 @@ int main()
 {
     std::cout << CYAN << "Welcome to the Enchanted Fairy Forest!" << RESET << std::endl;
 
-    std::cout << "\n" << YELLOW << "=== Summoning a Gentle Forest Sprite ===" << RESET << std::endl;
-    ClapTrap ct("Luna");
+    std::cout << "\n" << YELLOW << "=== Summoning a Gentle Forest Fairy ===" << RESET << std::endl;
+    ClapTrap ct("Nymera");
     ct.printStatus();
 
-    std::cout << "\n" << MAGENTA << "--- Basic trials for Luna the Sprite ---" << RESET << std::endl;
-    ct.attack("wicked thorn");
+    std::cout << "\n" << MAGENTA << "--- Basic trials for Nymera ---" << RESET << std::endl;
+    ct.attack("wicked witch");
     ct.printStatus();
     ct.takeDamage(20);
     ct.printStatus();
     ct.beRepaired(10);
     ct.printStatus();
 
-    std::cout << "\n" << YELLOW << "=== Summoning the Gatekeeper Fairy ===" << RESET << std::endl;
-    ScavTrap st("Sylva");
+    std::cout << "\n" << YELLOW << "=== Summoning the Forest Guardian Fairy ===" << RESET << std::endl;
+    ScavTrap st("Seraphina");
     st.printStatus();
 
-    std::cout << "\n" << MAGENTA << "--- Basic trials for Sylva the Gatekeeper ---" << RESET << std::endl;
-    st.attack("mischievous pixie");
+    std::cout << "\n" << MAGENTA << "--- Basic trials for Seraphina ---" << RESET << std::endl;
+    st.attack("mischievous goblin");
     st.printStatus();
     st.takeDamage(25);
     st.printStatus();
     st.beRepaired(15);
     st.printStatus();
-    std::cout << BLUE;  // Specific skill in blue for emphasis
-    st.guardGate();  // specific ScavTrap skill
+    std::cout << GREEN;
+    st.guardGate();
     std::cout << RESET;
     st.printStatus();
 
-    std::cout << "\n" << YELLOW << "=== Summoning the Fierce Frag Fairy ===" << RESET << std::endl;
+    std::cout << "\n" << YELLOW << "=== Summoning the Fierce Fairy ===" << RESET << std::endl;
     FragTrap ft("Flora");
     ft.printStatus();
 
-    std::cout << "\n" << MAGENTA << "--- Basic trials for Flora the Fierce ---" << RESET << std::endl;
+    std::cout << "\n" << MAGENTA << "--- Basic trials for Flora ---" << RESET << std::endl;
     ft.attack("dark shadow");
     ft.printStatus();
     ft.takeDamage(30);
     ft.printStatus();
     ft.beRepaired(20);
     ft.printStatus();
-    std::cout << GREEN;  // FragTrap special skill in green (high five = positive)
-    ft.highFivesGuys();  // specific FragTrap skill
+    std::cout << GREEN;
+    ft.highFivesGuys();
     std::cout << RESET;
     ft.printStatus();
 

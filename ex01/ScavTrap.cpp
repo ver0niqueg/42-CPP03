@@ -25,7 +25,7 @@ ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
     _hitPoints = 100;
     _energyPoints = 50;
     _attackDamage = 20;
-    std::cout << "ScavTrap: " << _name << " has been created." << std::endl;
+    std::cout << "ScavTrap: " << _name << " appears." << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)

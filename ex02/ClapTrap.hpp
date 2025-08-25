@@ -28,15 +28,15 @@ class ClapTrap
 {
     protected:
         std::string _name;
-        unsigned int _hitPoints; // health of the ClapTrap
+        unsigned int _hitPoints;
         unsigned int _energyPoints;
         unsigned int _attackDamage;
 
     public:
         ClapTrap();
         ClapTrap(std::string Name);
-        ClapTrap(const ClapTrap &copy); // constructeur de copie
-        ClapTrap &operator=(const ClapTrap &other); // operateur d'assignation
+        ClapTrap(const ClapTrap &copy);
+        ClapTrap &operator=(const ClapTrap &other);
         ~ClapTrap();
 
         void attack(const std::string& target);
